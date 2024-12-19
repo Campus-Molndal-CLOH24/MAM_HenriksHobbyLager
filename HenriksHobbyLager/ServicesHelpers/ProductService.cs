@@ -69,19 +69,43 @@ namespace HenriksHobbyLager.ServicesHelpers
 
         public void UpdateProduct()
         {
-            var id = int.Parse(ConsoleHelper.ReadInput("Ange produkt-ID att uppdatera"));
+            int id;
+            do
+            {
+                var input = ConsoleHelper.ReadInput("Ange produkt-ID att uppdatera");
+                if (int.TryParse(input, out id) && id > 0)
+                {
+                    break; // Valid ID entered
+                }
+                Console.WriteLine("Felaktigt ID. Ange ett giltigt produkt-ID som är större än 0.");
+            } while (true);
             var product = _repository.GetById(id);
-
             if (product == null)
             {
                 ConsoleHelper.PrintMessage("Produkten hittades inte.");
                 return;
             }
 
-            product.Name = ConsoleHelper.ReadInput("Nytt namn (lämna tomt för att behålla)") ?? product.Name;
-            product.Price = decimal.TryParse(ConsoleHelper.ReadInput("Nytt pris"), out var price) ? price : product.Price;
-            product.Stock = int.TryParse(ConsoleHelper.ReadInput("Ny lagerstatus"), out var stock) ? stock : product.Stock;
-            product.Category = ConsoleHelper.ReadInput("Ny kategori (lämna tomt för att behålla)") ?? product.Category;
+            var newName = ConsoleHelper.ReadInput("Nytt namn (lämna tomt för att behålla)");
+            if (!string.IsNullOrEmpty(newName))
+            {
+                product.Name = newName;
+            }
+            var newPriceInput = ConsoleHelper.ReadInput("Nytt pris");
+            if (decimal.TryParse(newPriceInput, out var newPrice))
+            {
+                product.Price = newPrice;
+            }
+            var newStockInput = ConsoleHelper.ReadInput("Ny lagerstatus");
+            if (int.TryParse(newStockInput, out var newStock))
+            {
+                product.Stock = newStock;
+            }
+            var newCategory = ConsoleHelper.ReadInput("Ny kategori (lämna tomt för att behålla)");
+            if (!string.IsNullOrEmpty(newCategory))
+            {
+                product.Category = newCategory;
+            }
 
             _repository.Update(product);
             ConsoleHelper.PrintMessage("Produkten har uppdaterats!");

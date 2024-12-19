@@ -55,6 +55,28 @@ namespace HenriksHobbyLager.Repositories
         {
             using (var context = new AppDbContext())
             {
+                var product = context.Products.Find(updatedProduct.Id);
+                if (product == null)
+                {
+
+                    Console.WriteLine($"Produkt med ID {id} hittades inte.");
+                }
+                else
+                {
+                    product.Name = updatedProduct.Name;
+                    product.Price = updatedProduct.Price;
+                    product.Stock = updatedProduct.Stock;
+                    product.Category = updatedProduct.Category;
+                    product.LastUpdated = DateTime.Now;
+                    context.SaveChanges();
+                }
+            }
+        }
+
+        public void Delete(int id)
+        {
+            using (var context = new AppDbContext())
+            {
                 var product = context.Products.FirstOrDefault(p => p.Id == id);
                 if (product == null)
                 {
@@ -66,11 +88,6 @@ namespace HenriksHobbyLager.Repositories
                     context.SaveChanges();
                 }
             }
-        }
-
-        internal void Delete(int id)
-        {
-            throw new NotImplementedException();
         }
     }
 }
