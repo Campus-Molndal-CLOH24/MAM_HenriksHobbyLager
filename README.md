@@ -62,7 +62,7 @@ Håller Mainmetoden kort och överskådlig.
 
 
 
-## Struktur // all my services are gone, hope you have them Avinash, 
+## Struktur
 
 | Katalog         | Fil(er)                                   |
 |------------------|-------------------------------------------|
