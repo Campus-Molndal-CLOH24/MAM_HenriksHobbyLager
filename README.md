@@ -76,4 +76,20 @@ Håller Mainmetoden kort och överskådlig.
 | Services        | ConsoleHelper.cs, MenuHandler.cs, ProductServices.cs |
 
 
+## Sekvensdiagram
+
+<img width="473" alt="image" src="https://github.com/user-attachments/assets/ce27ba06-50f8-4699-9989-e0de75281650" />
+
+
+
+
+## Klassdiagram
+
+
+
+
+
+
+
+
 
