@@ -10,7 +10,7 @@ namespace HenriksHobbyLager.Repositories
 {
     public class ProductRepository
     {
-        private object? id;
+        private object id = null;
 
         public IEnumerable<Product> GetAll()
         {
