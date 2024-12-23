@@ -7,8 +7,8 @@
 
 ## Kodare
 
-- 
-- 
-- 
+- Maria Schillström
+- Muhammad Aamir
+- Avinsash Chowdary
 - 
 - 
