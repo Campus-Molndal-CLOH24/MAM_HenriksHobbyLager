@@ -62,4 +62,18 @@ Håller Mainmetoden kort och överskådlig.
 
 
 
+## Struktur // all my services are gone, hope you have them Avinash, 
+
+| Katalog         | Fil(er)                                   |
+|------------------|-------------------------------------------|
+| Data            | HHL.sqlite                               |
+| Database        | AppDbContext.cs                          |
+| Facade          | IProductFacade.cs                        |
+| Interfaces      | IProduct.cs, IProductRepository.cs, IProductService.cs |
+| Models          | Product.cs                               |
+| ProgramManager  | LagerProgramManager.cs                   |
+| Repositories    | ProductRepositories.cs                   |
+| Services        | ConsoleHelper.cs, MenuHandler.cs, ProductServices.cs |
+
+
 
