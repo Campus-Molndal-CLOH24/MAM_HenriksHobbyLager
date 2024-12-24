@@ -45,14 +45,51 @@ Klassen använder en konkret implementation av HenriksHobbyLagerProgramManager.
 
 ## Vilka patterns använde ni och varför?
 
-Jag har väl lite svårt att sluta om jag börjar, så det blev xxxx 
+Det här fick jag fuska mig till om jag ska vara ärlig, och använda ChatGtp för detta med patterns är jag inte så ha på ännu. Jag ställde en fråga, just för detta frågan jag ställde 
+löd; 
 
+Hur kommer det sig att jag har gjort alla dessa pattern men vet inte om det och knappt vad de betyder?
+
+Svaret blev; Det är en väldigt vanlig situation, och faktiskt något positivt! 
+Det visar att du redan tillämpar best practices och designprinciper utan att du kanske formellt har lärt dig deras namn eller teori bakom dem. 
+
+Här är varför detta händer(här fick jag flera förklaringar, valde att dela med mig av två:
+
+1. Designmönster är ofta inbyggda i verktyg och ramverk
+Många moderna ramverk som Entity Framework Core och ASP.NET Core har designmönster som en del av sitt grundkoncept.
+Du använder mönster som Repository och Unit of Work automatiskt när du följer dokumentation eller tutorials, även om de inte alltid förklarar mönstren vid namn.
+Exempel:
+
+När du använder DbContext i Entity Framework, använder du implicit Unit of Work och Factory Pattern utan att behöva implementera dessa själv.
+2. Du följer "Best Practices"
+När du skriver kod som känns logisk och välorganiserad (t.ex. genom att separera databaslogik i en ProductRepository), följer du indirekt designprinciper som Separation of Concerns.
+Många tutorials och guider lär ut dessa mönster utan att kalla dem vid deras "officiella" namn.
+
+Nedan följer de pattern vi har använt oss av! 
+- Repository Pattern
+
+- Unit of Work (Implicit)
+
+- Factory Pattern (Implicit)
+
+- Dependency Injection (Potentiellt)
+
+- CRUD Pattern
+
+Standard för databasoperationer:
+Create: Add()
+Read: GetAll(), GetById()
+Update: Update()
+Delete: Delete()
+
+- Lazy Loading / Explicit Loading (Implicit i EF Core)
+
+- Separation of Concerns
 
 ## Vilka tekniska utmaningar stötte ni på och hur löste ni dem?
 
 Jag lyckades ange fel connectionstring till databasen jag skapat, så det hände ingenting när jag skulle köra programmet. Det visade sig att jag hade mina projekt sparade på olika ställen på datorn, och att jag hade missat att ta bort tidigare påbörjade projekt av HenriksHobbyLager, så jag valde fel. 
 Vi stötte även på patrull med update, då istället för att lämna name tomt, för att behålla namnet, så blev det utan namn. Det genererade att även delete blev fel, och efter x antal timmar att försöka lösa det så lämnade jag fint över det till mina andra gruppmedlemmar. 
-
 
 ## Hur planerade du ditt arbete?
 
