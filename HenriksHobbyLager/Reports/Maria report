@@ -18,7 +18,6 @@ Jag gjorde den från början i DBrowser, men vid ett av de senare möten vi hade
 
 Tänker jag visar ett exempel, istället för att skriva en massa text.
 
-
 Internal class Program
 {
     private static void Main(string[] args)
@@ -95,8 +94,6 @@ Vi stötte även på patrull med update, då istället för att lämna name tomt
 
 Efter att vi startat en ny grupp, så frågade jag dem om jag kunde börja själv då vi hade lite svårt att få ihop det med tider, för att vi inte skulle få göra allt i sista stund. Så jag började från scratch, som om jag var själv, och sen bestämde jag mig för att inte göra mer när jag gjort alla mappar, fixat med klasserna, samt databasen. 
 Gällande planering så är jag väl lite sisådär på att hålla planeringen, men det hade varit ännu värre om jag inte haft någon. Jag försökte förstå vad det var jag höll på med, ta igen det jag missat paralellt med att jag arbetade. Och var väldigt frågvis till ChatGtp. Som så många gånger förr så vet jag vad det är jag vill, jag har det i huvudet men kan inte riktigt få ner det i kod själv ännu helt 100. 
-
-
 
 ## Vilka dela gjorde du?
 
