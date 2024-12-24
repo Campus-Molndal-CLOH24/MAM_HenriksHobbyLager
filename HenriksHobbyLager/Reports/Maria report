@@ -44,15 +44,16 @@ Klassen använder en konkret implementation av HenriksHobbyLagerProgramManager.
 
 ## Vilka patterns använde ni och varför?
 
-Det här fick jag fuska mig till om jag ska vara ärlig, och använda ChatGtp för detta med patterns är jag inte så ha på ännu. Jag ställde en fråga, just för detta frågan jag ställde 
-löd; 
+Det här fick jag fuska mig till om jag ska vara ärlig, och använda ChatGtp för detta med patterns är jag inte så haj på ännu. 
+
+Så jag ställde;
 
 Hur kommer det sig att jag har gjort alla dessa pattern men vet inte om det och knappt vad de betyder?
 
 Svaret blev; Det är en väldigt vanlig situation, och faktiskt något positivt! 
 Det visar att du redan tillämpar best practices och designprinciper utan att du kanske formellt har lärt dig deras namn eller teori bakom dem. 
 
-Här är varför detta händer(här fick jag flera förklaringar, valde att dela med mig av två:
+Här är varför detta händer(här fick jag flera förklaringar, valde att dela med mig av två);
 
 1. Designmönster är ofta inbyggda i verktyg och ramverk
 Många moderna ramverk som Entity Framework Core och ASP.NET Core har designmönster som en del av sitt grundkoncept.
@@ -60,6 +61,7 @@ Du använder mönster som Repository och Unit of Work automatiskt när du följe
 Exempel:
 
 När du använder DbContext i Entity Framework, använder du implicit Unit of Work och Factory Pattern utan att behöva implementera dessa själv.
+
 2. Du följer "Best Practices"
 När du skriver kod som känns logisk och välorganiserad (t.ex. genom att separera databaslogik i en ProductRepository), följer du indirekt designprinciper som Separation of Concerns.
 Många tutorials och guider lär ut dessa mönster utan att kalla dem vid deras "officiella" namn.
