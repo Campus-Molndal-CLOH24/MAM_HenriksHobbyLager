@@ -2,7 +2,8 @@
 
 ## Facader
 
-### Facade: IProductFacade
+### IProductFacade
+
 Interfacet IProductFacade implementerar en enkel kontaktpunkt för produktrelaterade operationer. Det bidrar till attförenkla hanteringen av affärslogiken och interaktionen med datalagret, vilket tex förbättrar kodens läsbarhet.
 
 Metoderna inkluderar CRUD-operationer samt en sökfunktion, vilket gör facaden till en mångsidig lösning för hantering av produkter.
@@ -17,19 +18,15 @@ Vi valde att lägga denna som en separat klass, p.g.a. möjligheten till fler fa
 
 Interfacet IProductRepository fastställer standardoperationerna för att hantera produkter i datalagret. Det följer SOLID-principerna genom att vara välstrukturerat och fokuserat på en specifik uppgift. Detta möjliggör enkel utbytbarhet av implementationer och framtida utökningar av applikationen.
 
-
 ### IProduct;
 
 Interfacet IProduct fungerar som en bas för att definiera egenskaper för produkter i applikationen. Det hjälper till att skapa en enhetlig struktur för klasser som hanterar produkter, vilket gör det enkelt att utöka systemet vid behov. Det följer SOLID-principerna och möjliggör lös koppling och återanvändbarhet.
-
-
 
 ### IProductServices;
 
 Interfacet IProductService definierar de huvudsakliga metoderna för att hantera produkter i applikationen. Det fokuserar på affärslogik och tillhandahåller funktionalitet för att lägga till, ta bort, uppdatera och visa produkter.
 
 Metoderna är utformade för att stödja enkel interaktion med produktdata och kan implementeras på olika sätt beroende på applikationens behov. Interfacet följer SOLID-principerna genom att möjliggöra flexibel koppling och utbytbarhet av implementationer.
-
 
 ## Program
 
@@ -81,9 +78,6 @@ Håller Mainmetoden kort och överskådlig.
 <img width="473" alt="image" src="https://github.com/user-attachments/assets/ce27ba06-50f8-4699-9989-e0de75281650" />
 
 
-
-
-## Klassdiagram
 
 
 
