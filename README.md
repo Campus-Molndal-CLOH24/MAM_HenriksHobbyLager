@@ -24,10 +24,9 @@ HenriksHobbyLagerProgramManager är ansvarig för programmets huvudflöde. Den s
 
 Primära uppgifter:
 
-Visa menyalternativ via en MenuHandler.
-Validera användarens val och kalla på rätt funktion.
-Stänga av programmet när användaren väljer att avsluta.
-Design:
+- Visa menyalternativ via en MenuHandler.
+- Validera användarens val och kalla på rätt funktion.
+- Stänga av programmet när användaren väljer att avsluta.
 
 Klassen följer principerna om separation av ansvar och modularitet, vilket gör den lätt att underhålla och utöka.
 
@@ -35,13 +34,12 @@ Klassen följer principerna om separation av ansvar och modularitet, vilket gör
 
 Denna klass fungerar som applikationens startpunkt. Den instansierar och anropar HenriksHobbyLagerProgramManager, som hanterar huvudlogiken för programmet. Designen separerar programmets startflöde från dess kärnlogik, vilket gör koden renare och enklare att underhålla.
 
-Ansvar:
+- Skapa och anropa HenriksHobbyLagerProgramManager.
+- Starta huvudloopen för applikationen.
 
-Skapa och anropa HenriksHobbyLagerProgramManager.
-Starta huvudloopen för applikationen.
-Designfördelar:
+Följande principer i SOLID: 
 
-Följande principer i SOLID: SRP och OCP.
+SRP och OCP.
 Gör det enkelt att isolera och testa huvudlogiken i en separat klass.
 Håller Mainmetoden kort och överskådlig.
 
@@ -53,7 +51,6 @@ Håller Mainmetoden kort och överskådlig.
 |------------------|-------------------------------------------|
 | Data            | HHL.sqlite                               |
 | Database        | AppDbContext.cs                          |
-| Facade          | IProductFacade.cs                        |
 | Interfaces      | IProduct.cs, IProductRepository.cs, IProductService.cs |
 | Models          | Product.cs                               |
 | ProgramManager  | LagerProgramManager.cs                   |
