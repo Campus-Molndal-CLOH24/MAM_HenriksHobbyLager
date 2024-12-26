@@ -1,17 +1,5 @@
 # HenriksHobbyLager
 
-## Facader
-
-### IProductFacade
-
-Interfacet IProductFacade implementerar en enkel kontaktpunkt för produktrelaterade operationer. Det bidrar till attförenkla hanteringen av affärslogiken och interaktionen med datalagret, vilket tex förbättrar kodens läsbarhet.
-
-Metoderna inkluderar CRUD-operationer samt en sökfunktion, vilket gör facaden till en mångsidig lösning för hantering av produkter.
-
-Facaden följer SOLID-principerna genom att tillhandahålla en tydlig separation av ansvar, och möjlighet till utökning. I större system kan det enkelt utökas med fler facader för att hantera andra typer av affärslogik. 
-
-Vi valde att lägga denna som en separat klass, p.g.a. möjligheten till fler facader i framtiden. 
-
 ## Interfaces
 
 ### IProductRepository;
