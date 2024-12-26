@@ -51,6 +51,7 @@ Håller Mainmetoden kort och överskådlig.
 |------------------|-------------------------------------------|
 | Data            | HHL.sqlite                               |
 | Database        | AppDbContext.cs                          |
+| Database        | SqliteDatabaseInitializer.cs             |
 | Interfaces      | IProduct.cs, IProductRepository.cs, IProductService.cs |
 | Models          | Product.cs                               |
 | ProgramManager  | LagerProgramManager.cs                   |
