@@ -3,7 +3,7 @@ using HenriksHobbyLager.Models;
 
 namespace HenriksHobbyLager.Database
 {
-    public class AppDbContext : DbContext
+    public class SqliteDbContext : DbContext
     {
         public DbSet<Product>? Products { get; set; }
 

@@ -14,7 +14,7 @@ namespace HenriksHobbyLager.Repositories
 
         public IEnumerable<Product> GetAll()
         {
-            using (var context = new AppDbContext())
+            using (var context = new SqliteDbContext())
             {
                 return context.Products.ToList(); // Hämtar alla produkter från databasen
             }
@@ -22,7 +22,7 @@ namespace HenriksHobbyLager.Repositories
 
         public Product GetById(int id)
         {
-            using (var context = new AppDbContext())
+            using (var context = new SqliteDbContext())
             {
                 return context.Products.FirstOrDefault(p => p.Id == id); // Hämtar produkt med specifikt ID
             }
@@ -30,7 +30,7 @@ namespace HenriksHobbyLager.Repositories
 
         public IEnumerable<Product> Search(string searchTerm)
         {
-            using (var context = new AppDbContext())
+            using (var context = new SqliteDbContext())
             {
                 string lowerSearchTerm = searchTerm.ToLower(); // Konverterar söktermen till små bokstäver
 
@@ -43,7 +43,7 @@ namespace HenriksHobbyLager.Repositories
 
         public void Add(Product product)
         {
-            using (var context = new AppDbContext())
+            using (var context = new SqliteDbContext())
             {
                 product.Created = DateTime.Now; // Sätter skapelsedatum
                 context.Products.Add(product); // Lägger till produkten i databasen
@@ -53,7 +53,7 @@ namespace HenriksHobbyLager.Repositories
 
         public void Update(Product updatedProduct)
         {
-            using (var context = new AppDbContext())
+            using (var context = new SqliteDbContext())
             {
                 var product = context.Products.Find(updatedProduct.Id);
                 if (product == null)
@@ -75,7 +75,7 @@ namespace HenriksHobbyLager.Repositories
 
         public void Delete(int id)
         {
-            using (var context = new AppDbContext())
+            using (var context = new SqliteDbContext())
             {
                 var product = context.Products.FirstOrDefault(p => p.Id == id);
                 if (product == null)
