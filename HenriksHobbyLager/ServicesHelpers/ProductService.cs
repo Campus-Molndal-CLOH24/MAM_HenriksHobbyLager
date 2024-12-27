@@ -20,8 +20,8 @@ namespace HenriksHobbyLager.ServicesHelpers
 
             var product = new Product
             {
-                Name = ConsoleHelper.ReadInput("Namn"),
-                Price = decimal.Parse(ConsoleHelper.ReadInput("Pris")),
+                Name = ConsoleHelper.ReadStringInput("Namn"),
+                Price = ConsoleHelper.ReadDecimalInput("Pris"),
                 Stock = int.Parse(ConsoleHelper.ReadInput("Antal i lager")),
                 Category = ConsoleHelper.ReadInput("Kategori")
             };

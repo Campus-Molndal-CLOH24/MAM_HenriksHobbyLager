@@ -1,4 +1,5 @@
 ﻿using HenriksHobbyLager.Models;
+using System.Runtime.Intrinsics.Arm;
 
 namespace HenriksHobbyLager.ServicesHelpers
 {
@@ -24,13 +25,39 @@ namespace HenriksHobbyLager.ServicesHelpers
                 }
             }
 
-            public static string ReadInput(string prompt)//Läser in en sträng från användaren tex namn, pris, kategori
-            {
-                Console.Write($"{prompt}: ");
-                return Console.ReadLine();
-            }
+         public static string ReadInput(string prompt)//Läser in en sträng från användaren tex namn, pris, kategori
+         {
+             Console.Write($"{prompt}: ");
+             return Console.ReadLine();
+         }
 
-            public static void PrintMessage(string message)
+        public static string ReadStringInput(string prompt)
+        {
+            var input = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                ConsoleHelper.PrintMessage("Vänligen ange ett Produktnamn");
+            }
+            else
+            {
+                return input;
+            }
+        }
+
+        public static decimal ReadDecimalInput(string prompt)
+        {
+            while (true)
+            {
+                var input = ConsoleHelper.ReadInput(prompt);
+                if (decimal.TryParse(input, out var result))
+                {
+                    return result;
+                }
+                ConsoleHelper.PrintMessage("Ogiltigt pris, försök igen.");
+            }
+        }
+
+        public static void PrintMessage(string message)
             {
                 Console.WriteLine(message);
             }
