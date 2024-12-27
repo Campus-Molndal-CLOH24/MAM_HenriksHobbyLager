@@ -33,14 +33,18 @@ namespace HenriksHobbyLager.ServicesHelpers
 
         public static string ReadStringInput(string prompt)
         {
-            var input = Console.ReadLine();
-            if (string.IsNullOrWhiteSpace(input))
+            while (true)
             {
-                ConsoleHelper.PrintMessage("Vänligen ange ett Produktnamn");
-            }
-            else
-            {
-                return input;
+                Console.Write(prompt);
+                var input = Console.ReadLine();
+                if (!string.IsNullOrWhiteSpace(input))
+                {
+                    ConsoleHelper.PrintMessage("Vänligen ange ett produktnamn");
+                }
+                else
+                {
+                    return input;
+                }
             }
         }
 
