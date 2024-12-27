@@ -4,6 +4,3 @@
 
 - Henrik Hemmakodare, VD
 - Marcus Medina, Lärare
-
-
-
