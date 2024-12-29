@@ -1,3 +1,6 @@
+# Individuell Rapport
+
+## Muhammad Aamir Hussain
 
 # Hur fungerade gruppens arbete?
 ## Vår grupp fungerade bra eftersom vi hade en öppen dialog och hjälptes åt när vi stötte på problem. 
@@ -18,3 +21,5 @@ Single Responsibility Principle (SRP): Vi separerade ansvaret i olika klasser. T
 Open/Closed Principle (OCP): Vår kod kunde utökas utan att behöva ändras i grunden, vilket jag förstod var en viktig princip.
 Dependency Inversion Principle (DIP): Vi använde dependency injection för att hantera beroenden mellan olika delar av koden.
 Det var svårt att greppa allt i början, men med hjälp av gruppen och lite extra research kunde jag förstå hur principerna tillämpades i vårt projekt.
+
+
