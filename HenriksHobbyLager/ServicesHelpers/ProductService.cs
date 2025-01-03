@@ -22,8 +22,8 @@ namespace HenriksHobbyLager.ServicesHelpers
             {
                 Name = ConsoleHelper.ReadStringInput("Namn"),
                 Price = ConsoleHelper.ReadDecimalInput("Pris"),
-                Stock = int.Parse(ConsoleHelper.ReadInput("Antal i lager")),
-                Category = ConsoleHelper.ReadInput("Kategori")
+                Stock = ConsoleHelper.ReadIntInput("Antal i lager"),
+                Category = ConsoleHelper.ReadStringInput("Kategori")
             };
 
             _repository.Add(product);
@@ -91,12 +91,12 @@ namespace HenriksHobbyLager.ServicesHelpers
             {
                 product.Name = newName;
             }
-            var newPriceInput = ConsoleHelper.ReadInput("Nytt pris");
+            var newPriceInput = ConsoleHelper.ReadInput("Nytt pris (lämna tomt för att behålla)");
             if (decimal.TryParse(newPriceInput, out var newPrice))
             {
                 product.Price = newPrice;
             }
-            var newStockInput = ConsoleHelper.ReadInput("Ny lagerstatus");
+            var newStockInput = ConsoleHelper.ReadInput("Ny lagerstatus (lämna tomt för att behålla)");
             if (int.TryParse(newStockInput, out var newStock))
             {
                 product.Stock = newStock;
@@ -115,8 +115,6 @@ namespace HenriksHobbyLager.ServicesHelpers
         {
             var id = int.Parse(ConsoleHelper.ReadInput("Ange produkt-ID att ta bort"));
             _repository.Delete(id);
-            ConsoleHelper.PrintMessage("Produkten har tagits bort!");
-
         }
     }
 }

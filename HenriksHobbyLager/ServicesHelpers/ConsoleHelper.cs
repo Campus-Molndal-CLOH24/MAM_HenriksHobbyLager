@@ -35,11 +35,10 @@ namespace HenriksHobbyLager.ServicesHelpers
         {
             while (true)
             {
-                Console.Write(prompt);
-                var input = Console.ReadLine();
-                if (!string.IsNullOrWhiteSpace(input))
+                var input = ConsoleHelper.ReadInput(prompt);
+                if (string.IsNullOrWhiteSpace(input))
                 {
-                    ConsoleHelper.PrintMessage("Vänligen ange ett produktnamn");
+                    ConsoleHelper.PrintMessage("Vänligen ange ett produktnamn/Kategori");
                 }
                 else
                 {
@@ -57,7 +56,20 @@ namespace HenriksHobbyLager.ServicesHelpers
                 {
                     return result;
                 }
-                ConsoleHelper.PrintMessage("Ogiltigt pris, försök igen.");
+                ConsoleHelper.PrintMessage("Ogiltigt värde, försök igen.");
+            }
+        }
+
+        public static int ReadIntInput(string prompt)
+        {
+            while (true)
+            {
+                var input = ConsoleHelper.ReadInput(prompt);
+                if (int.TryParse(input, out var result))
+                {
+                    return result;
+                }
+                ConsoleHelper.PrintMessage("Ogiltigt värde, försök igen.");
             }
         }
 

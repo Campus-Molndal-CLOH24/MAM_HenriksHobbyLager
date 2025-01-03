@@ -50,6 +50,7 @@ namespace HenriksHobbyLager.ProgramManager
                                 Console.WriteLine("Fel val, vänligen försök igen");//felmeddelande 
                         }
                         break;
+
                     default:
                         Console.WriteLine("Invalid choice. Please enter 1 or 2.");
                         break;

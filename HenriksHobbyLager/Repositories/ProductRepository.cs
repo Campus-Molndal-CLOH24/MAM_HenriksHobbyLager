@@ -1,5 +1,6 @@
 ﻿using HenriksHobbyLager.Database;
 using HenriksHobbyLager.Models;
+using HenriksHobbyLager.ServicesHelpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -86,6 +87,7 @@ namespace HenriksHobbyLager.Repositories
                 {
                     context.Products.Remove(product);
                     context.SaveChanges();
+                    ConsoleHelper.PrintMessage("Produkten har tagits bort!");
                 }
             }
         }
